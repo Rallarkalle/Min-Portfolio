@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+hr {
+  height: 1rem;
+  background-color: rgba(36, 78, 8, 0.692);
+  box-shadow: 2px 2px 2px 0px;
+  border-style: none;
+}
+
+p,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.pageGrid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+.pageGrid header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 20vh;
+  background-image: url("/content/images/swedish_forest_path-slimwide.jpg");
+  opacity: 80%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pageGrid header #logo {
+  margin-left: 1rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  border: 2px solid;
+  padding: 0.3rem;
+  background-color: rgba(102, 75, 34, 0.7607843137);
+}
+.pageGrid header nav {
+  display: flex;
+}
+.pageGrid header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  margin-right: 2rem;
+  padding: 0;
+}
+@media (max-width: 500px) {
+  .pageGrid header nav ul {
+    justify-content: center;
+    gap: 0.75rem;
+    margin-right: 0;
+  }
+}
+.pageGrid header nav ul li {
+  display: flex;
+}
+.pageGrid header nav ul li a {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  background-color: rgba(102, 75, 34, 0.7607843137);
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+.pageGrid header nav ul li a:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+.pageGrid header nav ul li a:active {
+  transform: scale(1);
+}
+@media (max-width: 500px) {
+  .pageGrid header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    height: auto;
+    padding: 1rem 0.75rem;
+  }
+  .pageGrid header #logo {
+    margin-left: 0;
+  }
+}
+.pageGrid main {
+  margin: 2rem 1rem 1rem 1rem;
+}
+.pageGrid main h2 {
+  margin-top: -0.49rem;
+  background-color: rgba(240, 143, 64, 0.768627451);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0 0 8px 8px;
+}
+@media (max-width: 500px) {
+  .pageGrid main {
+    margin: 0.5rem;
+  }
+}
+.pageGrid main .greetingSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+}
+@media (max-width: 500px) {
+  .pageGrid main .greetingSection {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.pageGrid main .greetingSection p {
+  width: 25%;
+}
+@media (max-width: 500px) {
+  .pageGrid main .greetingSection p {
+    width: 90%;
+  }
+}
+.pageGrid main .greetingSection #containerSelfie {
+  width: 25%;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.445);
+}
+@media (max-width: 500px) {
+  .pageGrid main .greetingSection #containerSelfie {
+    width: 90%;
+  }
+}
+.pageGrid main .greetingSection #containerSelfie #selfie {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 3px;
+}
+.pageGrid main .projectSection {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .pageGrid main .projectSection {
+    height: auto;
+    margin: 2rem 0 2rem 0;
+  }
+}
+.pageGrid main .projectSection .cardsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .pageGrid main .projectSection .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.pageGrid main .projectSection .cardsContainer .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.432);
+  transition: 0.3s;
+  width: 25%;
+  border-radius: 8px;
+  background-color: rgba(54, 87, 12, 0.768627451);
+}
+@media (max-width: 500px) {
+  .pageGrid main .projectSection .cardsContainer .card {
+    width: 90%;
+  }
+}
+.pageGrid main .projectSection .cardsContainer .card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+.pageGrid main .projectSection .cardsContainer .card h4,
+.pageGrid main .projectSection .cardsContainer .card p {
+  padding: 0.3rem;
+  text-align: center;
+}
+.pageGrid main .projectSection .cardsContainer .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.445);
+}
+.pageGrid main .projectSection .cardsContainer .container {
+  padding: 2px 16px;
+}
+.pageGrid main .aboutSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+}
+@media (max-width: 500px) {
+  .pageGrid main .aboutSection {
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+  }
+}
+.pageGrid main .aboutSection #aboutImgContainer {
+  width: 40%;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.445);
+}
+@media (max-width: 500px) {
+  .pageGrid main .aboutSection #aboutImgContainer {
+    width: 90%;
+  }
+}
+.pageGrid main .aboutSection #aboutImgContainer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.pageGrid main .aboutSection p {
+  width: 33%;
+}
+@media (max-width: 500px) {
+  .pageGrid main .aboutSection p {
+    width: 90%;
+  }
+}
+.pageGrid main .contactSection {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+@media (max-width: 500px) {
+  .pageGrid main .contactSection {
+    flex-direction: column;
+  }
+}
+.pageGrid main .contactSection #formContainer,
+.pageGrid main .contactSection .contactInfo {
+  min-width: 35%;
+}
+.pageGrid main .contactSection .contactGrid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+  align-items: start;
+}
+.pageGrid main .contactSection .contactInfo p {
+  overflow-wrap: anywhere;
+}
+.pageGrid main .contactSection #emailForm div {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  margin-bottom: 0.5rem;
+}
+.pageGrid main .contactSection #emailForm input,
+.pageGrid main .contactSection #emailForm textarea {
+  width: 100%;
+}
+.pageGrid main .contactSection #emailForm textarea {
+  min-height: 6rem;
+  resize: both;
+}
+.pageGrid main .contactSection #emailForm #sendButton {
+  width: 30%;
+  margin: 0 auto;
+  display: block;
+}
+.pageGrid footer {
+  background-color: rgba(36, 78, 8, 0.692);
+  color: white;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

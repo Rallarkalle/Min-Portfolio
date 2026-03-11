@@ -1,0 +1,11 @@
+
+
+WHAT TO DO: 
+
+FRONTEND
+- Add a hamburger menu to the header for mobile
+- add media queries for tablet (max 1)
+
+BACKEND
+- Create a backend script and connect to the <form> in the contact section, so user can send email to my 
+    email address

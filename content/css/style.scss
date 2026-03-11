@@ -1,0 +1,313 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+//universal link styling
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+}
+
+//Section line styling
+hr {
+  height: 1rem;
+  background-color: rgba(36, 78, 8, 0.692);
+  //margin-top: 2rem;
+  box-shadow: 2px 2px 2px 0px;
+  border-style: none;
+}
+
+p,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.pageGrid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 20vh;
+    background-image: url("/content/images/swedish_forest_path-slimwide.jpg");
+    opacity: 80%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    #logo {
+      margin-left: 1rem;
+      font-family:
+        "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+        Arial, sans-serif;
+      font-weight: bold;
+      font-size: 2.5rem;
+      border: 2px solid;
+      padding: 0.3rem;
+      background-color: #664b22c2;
+    }
+    nav {
+      display: flex;
+
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        margin-right: 2rem;
+        padding: 0;
+
+        @media (max-width: 500px) {
+          justify-content: center;
+          gap: 0.75rem;
+          margin-right: 0;
+        }
+
+        li {
+          display: flex;
+          a {
+            font-family:
+              "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+              "Lucida Sans", Arial, sans-serif;
+            font-weight: bold;
+            background-color: #664b22c2;
+            padding: 0.3rem;
+            border-radius: 5px;
+            border: 1px solid black;
+            transition: transform 0.3s;
+            display: inline-block;
+          }
+          a:visited {
+          }
+          a:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+          }
+          a:active {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      height: auto;
+      padding: 1rem 0.75rem;
+
+      #logo {
+        margin-left: 0;
+      }
+    }
+  }
+
+  main {
+    margin: 2rem 1rem 1rem 1rem;
+
+    h2 {
+      margin-top: -0.49rem;
+      background-color: #f08f40c4;
+      width: fit-content;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0 0 8px 8px;
+    }
+
+    @media (max-width: 500px) {
+      margin: 0.5rem;
+    }
+
+    //GREETINGS SECTION
+    .greetingSection {
+      //background-image: url("/content/images/woodenBoards.JPG");
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 70vh;
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      p {
+        width: 25%;
+        @media (max-width: 500px) {
+          width: 90%;
+        }
+      }
+      #containerSelfie {
+        width: 25%;
+        height: auto;
+        overflow: hidden;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.445);
+
+        @media (max-width: 500px) {
+          width: 90%;
+        }
+
+        #selfie {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    //PROJECTS SECTION
+    .projectSection {
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      @media (max-width: 500px) {
+        height: auto;
+        margin: 2rem 0 2rem 0;
+      }
+      .cardsContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @media (max-width: 500px) {
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.432);
+          transition: 0.3s;
+          width: 25%;
+          border-radius: 8px;
+          background-color: #36570cc4;
+
+          @media (max-width: 500px) {
+            width: 90%;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px 8px 0 0;
+          }
+          h4,
+          p {
+            padding: 0.3rem;
+            text-align: center;
+          }
+        }
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.445);
+        }
+        .container {
+          padding: 2px 16px;
+        }
+      }
+    }
+    //ABOUT SECTION
+    .aboutSection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 70vh;
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
+      }
+
+      #aboutImgContainer {
+        width: 40%;
+        height: auto;
+        overflow: hidden;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.445);
+        @media (max-width: 500px) {
+          width: 90%;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+      p {
+        width: 33%;
+
+        @media (max-width: 500px) {
+          width: 90%;
+        }
+      }
+    }
+    //CONTACT SECTION
+    .contactSection {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
+
+      #formContainer,
+      .contactInfo {
+        min-width: 35%;
+      }
+
+      .contactGrid {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem 1rem;
+        align-items: start;
+      }
+
+      .contactInfo p {
+        overflow-wrap: anywhere;
+      }
+      #emailForm div {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+        margin-bottom: 0.5rem;
+      }
+
+      #emailForm input,
+      #emailForm textarea {
+        width: 100%;
+      }
+
+      #emailForm textarea {
+        min-height: 6rem;
+        resize: both;
+      }
+
+      #emailForm #sendButton {
+        width: 30%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+  //FOOTER SECTION
+  footer {
+    background-color: rgba(36, 78, 8, 0.692);
+    color: white;
+    text-align: center;
+  }
+}

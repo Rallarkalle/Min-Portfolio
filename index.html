@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="content/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="pageGrid">
+      <header>
+        <a id="logo" href="#">A.E.V.L.</a>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="#aboutSection">About</a>
+            </li>
+            <li>
+              <a href="#projectSection">Projects</a>
+            </li>
+            <li>
+              <a href="#">Skills</a>
+            </li>
+            <li>
+              <a href="#contactSection">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      
+      <main>
+        <section class="greetingSection">
+          <div id="containerSelfie">
+            <img
+              id="selfie"
+              src="content/images/selfie_cropped.JPEG"
+              alt="selfie photo"
+            />
+          </div>
+          <p>
+            <strong>Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit. Laudantium
+            recusandae pariatur cupiditate cumque reiciendis maiores autem
+            voluptatum iusto harum exercitationem?
+          </p>
+        </section>
+
+        <hr id="projectSection" />
+
+        <h2>Projects</h2>
+
+        <section class="projectSection" >
+          <div class="cardsContainer">
+            <div class="card">
+              <img src="content/images/kitchenTable-cropped.JPG" alt="kitchen table" />
+              <div class="container">
+                <h4>Köksbord</h4>
+                <p>Material: Ek och björk</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="content/images/cabinet-cropped.JPG" alt="cabinet" />
+              <div class="container">
+                <h4>Skåp</h4>
+                <p>Material: furu</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="content/images/sofaTable-cropped.JPG" alt="sofa table" />
+              <div class="container">
+                <h4>Soffbord</h4>
+                <p>Material: furu</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr id="aboutSection"/>
+
+        <h2>About Me</h2>
+        <section class="aboutSection" >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+            neque accusamus at saepe pariatur ratione suscipit consectetur.
+            Asperiores labore consequuntur iusto architecto aut quis facilis sed
+            recusandae! 
+            <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam 
+            recusandae fugit unde aliquam rerum voluptate molestiae alias, 
+            maxime officia labore dolor voluptates, nobis possimus excepturi? 
+          </p>
+          <div id="aboutImgContainer">
+            <img src="content/images/sunset-haybale.JPEG" alt="man on a haybale at sunset">
+          </div>
+        </section>
+
+        <hr>
+
+        <h2>Contact</h2>
+        <section class="contactSection" id="contactSection">
+
+          <section class="contactInfo">
+            <h3>Contact Information</h3>
+            <div class="contactGrid">
+              <span>📞</span><p>(+46) 0763917902</p>
+              <span>✉</span><p>adam.lundquist1993@gmail.com</p>
+              <span>📍</span><p>Spetsbergsgatan 4A,<br>41466, Sweden</p>
+            </div>
+          </section>
+
+          <div id="formContainer">
+            <h3>Send me an email</h3>
+            
+            <form id="emailForm" method="post" action="/contact">
+              <div>
+                <label for="name">Name:</label>
+                <input name="name" id="name" type="text" required></input>
+              </div>
+              <div>
+                <label for="email">Email:</label>
+                <input name="email" id="email" type="email" required></input>
+              </div>
+              <div>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" type="text" required></textarea>
+              </div>
+
+              <input id="sendButton" type="submit" value="Send" />
+            </form>
+          </div>
+        </section>
+
+      </main>
+
+      <footer>
+        &copy; 2026 Adam Lundquist — Built with HTML, CSS, JS
+      </footer>
+    </div>
+  </body>
+</html>
